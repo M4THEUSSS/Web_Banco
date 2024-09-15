@@ -1,19 +1,21 @@
 *{
     margin: 0%;
     padding: 0%;
-    font-family: var(--fontPrimaria) "Arial";
+    font-family: var(--fontrPrimaria),"Arial";
 }
 
-:root{
-    --corPrimaria:#ba2d2d;
+:root {
+    --corPrimaria: #ba2d2d;
     --corSecundaria: #f2511b; 
-    --corLaranja:#f2871b5c; 
-    --corpreto:#302727;
-    --fontPrimaria: Roboto;
-    --fontSecundaria:SUSE; 
+    --corLaranja: #f2871b5c; 
+    --corAmarela: #c7c730; 
+    --corPreto: #302727;
+    --fontePrimaria: Roboto;
+    --fonteSecundria: SUSE;
 }
-h1,h2,h3,h4,h5,h6{
-    font-family: var(--fontSecundaria) "Trebuchet MS";
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--fonteSecundria), "Trebuchet MS";
 }
 
 header, footer{
@@ -22,38 +24,84 @@ header, footer{
     color: white;
     padding: 20px 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
 }
+
 nav{
     display: flex;
     align-items: center;
 }
+
 nav ul{
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 20px;
 }
-nav ul a{ /* aqui modificar o link da lista Menu  */
-    color: white; /*aqui modificar a cor fonte da lista Menu  */
-    text-decoration: none;/*aqui tira a aparencia de link da lista  */
+
+ nav ul a{  /*aqui modificar o link da lista  */
+    color: white; /*aqui modificar a cor fonte da lista  */
+    text-decoration: none; /*aqui tira a aparencia de link da lista  */
 }
-nav ul a:hover{  /* Código para passar o mouse e aparecer o sublinhado */
-    text-decoration: underline; 
+
+/* passar e aparecer o sublinhado */
+nav ul a:hover{
+    text-decoration: underline;
 }
-section{  
-    background-color: aqua;
+
+section{
     width: 100%;
     padding: 10px 0px;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-#banner { /* esse comando modificar a estrutura do banner não a imagem em si  */
-    height: absolute;
-    overflow-y: hidden;
+
+ #banner {  /* esse comando modificar a estrutura do banner não a imagem em si  */
+    height: 400px; 
+     overflow-y: hidden;
     align-items: start;
-     /* background-image: url(/images/banner.jpg); aqui insere a imagem pelo css  
+    /* background-image: url(/images/banner.jpg); aqui insere a imagem pelo css  
     background-size: cover;
     background-repeat: repeat;
     background-position: center; */  /* - --- - - -  aqui foca em uma determinada parte da imagem tipo: topo, centro ou em baixo  */
+}
+#mensagem{
+    position: absolute;
+    top: 200px;
+    width: 40%;
+    background-color: var(--corLaranja);
+}
+
+ #banner img{   /*  esse comando modificar somente a imagem do banner   */
+    width: 100%;
+}
+#btnHeader{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
+.agrupamento{ 
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+   
+}
+.card{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+}
+
+@media screen and (max-width: 600px) { 
+    .agrupamento{
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
